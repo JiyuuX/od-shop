@@ -10,7 +10,7 @@ const ProductPage = ({
     productID: string;
   };
 }) => {
-  const [product, setProduct] = useState<any>(null); // or specify a more detailed type
+  const [product, setProduct] = useState<any>(null);
   const [email, setEmail] = useState('');
   const [copied, setCopied] = useState(false);
   const [cryptoAddress, setCryptoAddress] = useState('');
