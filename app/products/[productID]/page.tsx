@@ -81,7 +81,11 @@ const ProductPage = ({
         toast.error("Failed to save data: " + errorData.message);
       }
     } catch (error) {
-      toast.error("Error saving data: " + error.message);
+      if (error instanceof Error) {
+        toast.error("Error saving data: " + error.message);
+      } else {
+        toast.error("Unknown error occurred.");
+      }
     }
   };
 
