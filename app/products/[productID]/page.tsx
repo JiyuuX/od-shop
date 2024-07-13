@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import toast, { Toaster } from 'react-hot-toast';
@@ -10,7 +10,7 @@ const ProductPage = ({
     productID: string;
   };
 }) => {
-  const [product, setProduct] = useState<any>(null);
+  const [product, setProduct] = useState<any | null>(null);
   const [email, setEmail] = useState('');
   const [copied, setCopied] = useState(false);
   const [cryptoAddress, setCryptoAddress] = useState('');
