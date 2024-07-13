@@ -5,16 +5,14 @@ const HowItWorks = () => {
   return (
     <div className="flex flex-col items-center p-5 bg-[#242222] min-h-screen text-white font-sans">
       <a href="/" className="absolute top-4 left-4 text-white text-lg">← Back</a>
-      <div className="mt-12"> {/* Başlığı biraz aşağı almak için margin-top ekledim */}
-        <motion.h1
-          className="text-4xl sm:text-5xl font-bold mb-5 text-center"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          HOW IT WORKS?
-        </motion.h1>
-      </div>
+      <motion.h1
+        className="text-4xl sm:text-5xl font-bold mb-5 text-center mt-16" // Margin top eklendi
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        HOW IT WORKS?
+      </motion.h1>
 
       <div className="bg-[#181818] p-5 rounded-lg shadow-lg w-full max-w-xl md:max-w-3xl">
         <h2 className="text-2xl font-semibold mb-3 text-white">1) Choose Payment Method</h2>
