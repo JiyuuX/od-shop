@@ -51,22 +51,12 @@ const Home = () => {
       </header>
 
       <motion.h1
-        className="my-3 sm:my-5 text-3xl sm:text-4xl text-center relative overflow-hidden h-12"
+        className="my-3 sm:my-5 text-3xl sm:text-4xl text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        {[...Array.from('Welcome to Odium Shop')].map((letter, index) => (
-          <motion.span
-            key={index}
-            className="inline-block relative mx-[1px]"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.01, duration: 0.2 }}
-          >
-            {letter}
-          </motion.span>
-        ))}
+        Welcome to Odium Shop
         <div className="absolute left-0 bottom-[-5px] w-full h-[3px] bg-gradient-to-r from-red-400 via-yellow-400 to-blue-400 animate-rainbow"></div>
       </motion.h1>
 
