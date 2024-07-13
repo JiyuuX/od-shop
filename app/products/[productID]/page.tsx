@@ -43,7 +43,7 @@ const ProductPage = ({
     fetchProduct();
   }, [productID]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (cryptoAddress === "0xE1b03a5ca277b1Aa330Dcd1316bB7Ef881fBf96C") {
       toast.error("This crypto address is not allowed.");
