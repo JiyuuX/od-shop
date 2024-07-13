@@ -72,6 +72,7 @@ const Home = () => {
           >
             <h3 className="mb-2">{item.title}</h3>
             <p className="whitespace-pre-line">{item.content}</p>
+            <p className="whitespace-pre-line">{item.price}</p>
             <Link href={`/products/${item.id}`}>
               <motion.button className="bg-[#3498db] text-white border-none mt-5 p-2 text-lg cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 rounded-lg">
                 Buy Now
