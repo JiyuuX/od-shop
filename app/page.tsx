@@ -38,7 +38,7 @@ const Home = () => {
           transition={{ duration: 0.5 }}
         >
           Odium Shop
-          <div className="absolute left-0 right-0 bottom-[-5px] h-[3px] bg-gradient-to-r from-red-400 via-yellow-400 to-blue-400 animate-rainbow"></div>
+          <div className="absolute left-0 right-0 bottom-[-5px] h-[3px] bg-gradient-to-r"></div>
         </motion.div>
         <div className="flex">
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="mr-2 sm:mr-4">
@@ -57,7 +57,7 @@ const Home = () => {
         transition={{ duration: 1 }}
       >
         Welcome to Odium Shop
-        <div className="absolute left-0 bottom-[-5px] w-full h-[3px] bg-gradient-to-r from-red-400 via-yellow-400 to-blue-400 animate-rainbow"></div>
+        <div className="absolute left-0 bottom-[-5px] w-full h-[3px] bg-gradient-to-r"></div>
       </motion.h1>
 
       <h1 className="text-center mb-5 text-white">
