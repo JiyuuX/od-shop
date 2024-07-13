@@ -29,10 +29,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center p-5 bg-[#242222] min-h-screen">
-      <header className="flex justify-between w-full p-5">
+    <div className="flex flex-col items-center p-3 sm:p-5 bg-[#242222] min-h-screen">
+      <header className="flex flex-col sm:flex-row justify-between w-full p-3 sm:p-5">
         <motion.div
-          className="text-2xl font-bold relative cursor-pointer"
+          className="text-xl sm:text-2xl font-bold relative cursor-pointer"
           animate={{ x: 0, opacity: 1 }}
           initial={{ x: -100, opacity: 0 }}
           transition={{ duration: 0.5 }}
@@ -41,17 +41,17 @@ const Home = () => {
           <div className="absolute left-0 right-0 bottom-[-5px] h-[3px] bg-gradient-to-r from-red-400 via-yellow-400 to-blue-400 animate-rainbow"></div>
         </motion.div>
         <div className="flex">
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="mr-4">
-            <img src="https://cdn3.emoji.gg/emojis/6627-x-logo.png" alt="X" className="w-14 h-14 p-2" />
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="mr-2 sm:mr-4">
+            <img src="https://cdn3.emoji.gg/emojis/6627-x-logo.png" alt="X" className="w-10 h-10 sm:w-14 sm:h-14 p-2" />
           </a>
           <a href="https://discord.com" target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn3.emoji.gg/emojis/4789-discord-icon.png" alt="Discord" className="w-14 h-14 p-2" />
+            <img src="https://cdn3.emoji.gg/emojis/4789-discord-icon.png" alt="Discord" className="w-10 h-10 sm:w-14 sm:h-14 p-2" />
           </a>
         </div>
       </header>
 
       <motion.h1
-        className="my-5 text-4xl text-center relative overflow-hidden h-12"
+        className="my-3 sm:my-5 text-3xl sm:text-4xl text-center relative overflow-hidden h-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -74,16 +74,16 @@ const Home = () => {
         We are an arbitrage bridge.. buy original licensed products cheaper than your home country..
       </h1>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full mt-5">
         {items.map(item => (
           <motion.div
             key={item.id}
-            className="bg-[#181818] p-5 text-center cursor-pointer text-[#bfd5f1] transition-transform duration-300 ease-in-out transform hover:scale-105 rounded-lg"
+            className="bg-[#181818] p-3 sm:p-5 text-center cursor-pointer text-[#bfd5f1] transition-transform duration-300 ease-in-out transform hover:scale-105 rounded-lg"
           >
             <h3 className="mb-2">{item.title}</h3>
             <p className="whitespace-pre-line">{item.content}</p>
             <Link href={`/products/${item.id}`}>
-              <motion.button className="bg-[#3498db] text-white border-none mt-10 p-2 text-lg cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 rounded-lg">
+              <motion.button className="bg-[#3498db] text-white border-none mt-5 p-2 text-lg cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 rounded-lg">
                 Buy Now
               </motion.button>
             </Link>
