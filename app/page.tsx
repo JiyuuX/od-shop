@@ -7,6 +7,7 @@ interface Item {
   id: number;
   title: string;
   content: string;
+  price: string;
 }
 
 const Home = () => {
