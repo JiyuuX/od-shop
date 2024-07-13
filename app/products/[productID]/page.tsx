@@ -30,12 +30,7 @@ const ProductPage = ({
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await fetch(`https://devran.pythonanywhere.com/api/item/${productID}`, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        });
+        const res = await fetch(`https://devran.pythonanywhere.com/api/item/${productID}`);
         if (!res.ok) {
           throw new Error('Network response was not ok');
         }
@@ -81,7 +76,6 @@ const ProductPage = ({
         toast.error("Failed to save data: " + errorData.message);
       }
     } catch (error) {
-      // Type guard to check if error is an instance of Error
       if (error instanceof Error) {
         toast.error("Error saving data: " + error.message);
       } else {
@@ -103,7 +97,7 @@ const ProductPage = ({
         Attention: Use BEP20- Binance Smart Chain Network
       </div>
       <div className="mb-4 md:mb-6">
-        <Image src="/wallet.png" alt="QR Code" width={150} height={150} />
+        <Image src="/wallet.png" alt="QR Code" width={150} height={150} className="mx-auto" />
       </div>
       <div className="bg-gray-800 text-white p-4 mb-4 md:mb-6 flex flex-col md:flex-row justify-between items-center w-full max-w-xl rounded">
         <span className="mb-2 md:mb-0">0xE1b03a5ca277b1Aa330Dcd1316bB7Ef881fBf96C</span>
@@ -119,6 +113,7 @@ const ProductPage = ({
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="mb-4 p-3 w-full rounded bg-gray-700 text-white"
+          required
         />
         <input
           type="text"
@@ -126,6 +121,7 @@ const ProductPage = ({
           value={cryptoAddress}
           onChange={(e) => setCryptoAddress(e.target.value)}
           className="mb-4 p-3 w-full rounded bg-gray-700 text-white"
+          required
         />
         <button type="submit" className="bg-blue-500 text-white px-6 py-3 rounded-full w-full transition duration-300 transform hover:bg-blue-400 hover:scale-105">
           Submit
