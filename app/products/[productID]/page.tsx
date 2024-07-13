@@ -3,6 +3,12 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import toast, { Toaster } from 'react-hot-toast';
 
+interface Product {
+  id: string;
+  title: string;
+  content: string;
+}
+
 const ProductPage = ({
   params: { productID },
 }: {
@@ -10,7 +16,7 @@ const ProductPage = ({
     productID: string;
   };
 }) => {
-  const [product, setProduct] = useState<any | null>(null);
+  const [product, setProduct] = useState<Product | null>(null);
   const [email, setEmail] = useState('');
   const [copied, setCopied] = useState(false);
   const [cryptoAddress, setCryptoAddress] = useState('');
