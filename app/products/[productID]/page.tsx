@@ -10,7 +10,7 @@ const ProductPage = ({
     productID: string;
   };
 }) => {
-  const [product, setProduct] = useState(null);
+  const [product, setProduct] = useState<any>(null); // or specify a more detailed type
   const [email, setEmail] = useState('');
   const [copied, setCopied] = useState(false);
   const [cryptoAddress, setCryptoAddress] = useState('');
@@ -47,6 +47,10 @@ const ProductPage = ({
     e.preventDefault();
     if (cryptoAddress === "0xE1b03a5ca277b1Aa330Dcd1316bB7Ef881fBf96C") {
       toast.error("This crypto address is not allowed.");
+      return;
+    }
+    if (!product) {
+      toast.error("Product not found.");
       return;
     }
 
