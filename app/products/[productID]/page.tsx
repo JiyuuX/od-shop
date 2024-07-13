@@ -100,7 +100,7 @@ const ProductPage = ({
         <Image src="/wallet.png" alt="QR Code" width={150} height={150} className="mx-auto" />
       </div>
       <div className="bg-gray-800 text-white p-4 mb-4 md:mb-6 flex flex-col md:flex-row justify-between items-center w-full max-w-xl rounded">
-        <span className="mb-2 md:mb-0">0xE1b03a5ca277b1Aa330Dcd1316bB7Ef881fBf96C</span>
+        <span className="mb-2 md:mb-0 text-center text-xs md:text-base truncate">{`0xE1b03a5ca277b1Aa330Dcd1316bB7Ef881fBf96C`}</span>
         <button onClick={handleCopy} className="bg-blue-600 text-white px-4 py-2 rounded flex items-center">
           {copied ? <span className="mr-2">✓</span> : null}
           {copied ? "Copied" : "Copy"}
