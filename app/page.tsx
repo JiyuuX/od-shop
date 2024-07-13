@@ -91,7 +91,7 @@ const Home = () => {
         ))}
       </div>
 
-      <footer className="bg-[#0C0B0B] text-[#8E8484] p-2 text-center text-sm w-full mt-auto">
+      <footer className="bg-[#0C0B0B] text-[#8E8484] p-2 text-center text-sm w-full mt-6">
         &copy; 2024 - All rights reserved.
       </footer>
     </div>
