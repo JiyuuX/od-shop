@@ -7,6 +7,7 @@ interface Product {
   id: string;
   title: string;
   content: string;
+  price: string;
 }
 
 const ProductPage = ({
@@ -93,6 +94,7 @@ const ProductPage = ({
       <a href="/" className="absolute top-4 left-4 text-white text-lg">← Back</a>
       <h1 className="text-white text-3xl mb-4 md:mb-6">{product.title}</h1>
       <p className="text-white text-sm md:text-base mb-4 md:mb-6">{product.content}</p>
+      <p className="text-white text-sm md:text-base mb-4 md:mb-6">{product.price}</p>
       <div className="bg-yellow-200 text-red-700 border border-green-300 p-4 mb-4 md:mb-6 w-full max-w-xl rounded text-center">
         Attention: Use BEP20- Binance Smart Chain Network
       </div>

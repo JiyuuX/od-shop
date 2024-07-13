@@ -65,6 +65,14 @@ const Home = () => {
         We are an arbitrage bridge.. buy original licensed products cheaper than your home country..
       </h1>
 
+      <nav className="mb-5">
+        <Link href="/how-it-works">
+          <button className="bg-[#3498db] text-white border-none mt-5 p-2 text-lg cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 rounded-lg">
+            How it works? How Refund?
+          </button>
+        </Link>
+      </nav>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 w-full mt-5">
         {items.map(item => (
           <motion.div
@@ -73,7 +81,7 @@ const Home = () => {
           >
             <h3 className="mb-2">{item.title}</h3>
             <p className="whitespace-pre-line">{item.content}</p>
-            <p className="whitespace-pre-line">{item.price}</p>
+            <p className="whitespace-pre-line">{item.price} (USDT)</p>
             <Link href={`/products/${item.id}`}>
               <motion.button className="bg-[#3498db] text-white border-none mt-5 p-2 text-lg cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-105 rounded-lg">
                 Buy Now
