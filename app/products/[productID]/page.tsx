@@ -81,6 +81,7 @@ const ProductPage = ({
         toast.error("Failed to save data: " + errorData.message);
       }
     } catch (error) {
+      // Type guard to check if error is an instance of Error
       if (error instanceof Error) {
         toast.error("Error saving data: " + error.message);
       } else {
